@@ -1,1 +1,10 @@
-<p>input-username works!</p>
+<form #userInput="ngForm" (ngSubmit)="userSubmit(userInput)">
+    <label for="username">Trainer name:</label>
+    <input type="text" 
+    ngModel
+    #username="ngModel"
+    name="username" 
+    id="username" 
+    placeholder="Please insert your trainer name">
+    <button type="submit">Login</button>
+</form>
