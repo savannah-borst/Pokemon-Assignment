@@ -2,7 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, of, switchMap, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { StorageKeys } from '../enum/storage-keys.enum';
 import { User } from '../models/user.module';
+import { StorageUtil } from '../utils/storage.util';
 
 const { apiUsers } = environment;
 const { apiKey } = environment;
@@ -26,7 +28,7 @@ export class LoginService {
         return of(user);
       }),
       tap((user: User) => {
-        
+        StorageUtil.storageSave<User>(StorageKeys.User, user)
       })
     )
   }
