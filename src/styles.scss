@@ -1,7 +1,2 @@
 /* You can add global styles to this file, and also import other style files */
-    body {
-    background-image: url("assets/images/pokemonbackground.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
-    }
+@import '../node_modules/mdb-ui-kit/src/scss/mdb.free.scss';

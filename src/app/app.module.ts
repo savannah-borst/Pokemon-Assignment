@@ -9,6 +9,7 @@ import { LandingPage } from './pages/landing/landing.page';
 import { TrainerPage } from './pages/trainer/trainer.page';
 import { CataloguePage } from './pages/catalogue/catalogue.page';
 import { InputUsernameComponent } from './components/input-username/input-username.component';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { InputUsernameComponent } from './components/input-username/input-userna
     TrainerPage,
     CataloguePage,
     InputUsernameComponent,
+    PokemonListComponent,
   ],
   imports: [ //modules
     BrowserModule,
