@@ -10,7 +10,7 @@ declare module namespace {
     }
 
     export interface Other {
-        official-artwork: OfficialArtwork;
+        "official-artwork": OfficialArtwork;
     }
 
 
@@ -47,4 +47,4 @@ declare module namespace {
         sprites: Sprites;
         stats: Stat[];
     }
-
+}
