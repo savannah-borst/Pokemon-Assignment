@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { finalize, map } from 'rxjs';
+import { finalize } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { PokemonList } from '../models/pokemon.module';
-import { ListResponse } from '../models/response.model';
 
 const { apiPokemonList } = environment
 
