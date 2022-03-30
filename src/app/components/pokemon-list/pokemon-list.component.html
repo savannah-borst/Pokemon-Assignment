@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-3" *ngFor="let pokemon of pokemons">
+        <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">{{pokemon.name}}</h5>
+            <p class="card-text">
+                <b>Type: {{ pokemon.types[0].type.name }}</b> 
+            </p>
+            <p><b>{{pokemon.stats[0].base_stat}}</b></p>
+            <img [src]="pokemon.sprites.front_default" alt="pokemons" />
+            <button type="button" class="btn btn-primary">Button</button>
+            </div>
+        </div>
+    </div>
+</div>

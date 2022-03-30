@@ -12,6 +12,7 @@ import { InputUsernameComponent } from './components/input-username/input-userna
 import { TrainerInfoComponent } from './components/trainer-info/trainer-info.component';
 import { TrainerCollectionComponent } from './components/trainer-collection/trainer-collection.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     TrainerInfoComponent,
     TrainerCollectionComponent,
     NavbarComponent,
+    PokemonListComponent,
   ],
   imports: [ //modules
     BrowserModule,
