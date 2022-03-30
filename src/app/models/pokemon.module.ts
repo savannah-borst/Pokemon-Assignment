@@ -1,24 +1,20 @@
-declare module namespace {
+export interface PokemonObject {
+    id: number;
+    name: string;
+    sprites: Sprites;
+    stats: Stat[];
+    types: Type[];
+}
 
     export interface Species {
         name: string;
         url: string;
     }
-
-    export interface OfficialArtwork {
-        front_default: string;
-    }
-
-    export interface Other {
-        official-artwork: OfficialArtwork;
-    }
-
-
     
     export interface Sprites {
         front_default: string;
-        other: Other;
     }
+
 
     export interface Stat2 {
         name: string;
@@ -41,10 +37,4 @@ declare module namespace {
         type: Type2;
     }
 
-    export interface RootObject {
-        id: number;
-        name: string;
-        sprites: Sprites;
-        stats: Stat[];
-    }
-
+    
