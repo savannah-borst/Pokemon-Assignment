@@ -9,6 +9,9 @@ import { LandingPage } from './pages/landing/landing.page';
 import { TrainerPage } from './pages/trainer/trainer.page';
 import { CataloguePage } from './pages/catalogue/catalogue.page';
 import { InputUsernameComponent } from './components/input-username/input-username.component';
+import { TrainerInfoComponent } from './components/trainer-info/trainer-info.component';
+import { TrainerCollectionComponent } from './components/trainer-collection/trainer-collection.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { InputUsernameComponent } from './components/input-username/input-userna
     TrainerPage,
     CataloguePage,
     InputUsernameComponent,
+    TrainerInfoComponent,
+    TrainerCollectionComponent,
+    NavbarComponent,
   ],
   imports: [ //modules
     BrowserModule,
