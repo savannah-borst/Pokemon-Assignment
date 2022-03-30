@@ -1,5 +1,5 @@
-<main>
-    <h1>trainer Page</h1>
+<main class="container">
+    <h1 *ngIf="this.user!=undefined">{{user.username}}'s page</h1>
     <p>Your caught Pokémon</p>
     <!--<app-pokemon-list [pokemon]="favourites"></app-pokemon-list>-->
-</main>>
+</main>
