@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PokemonList } from 'src/app/models/pokemon.module';
+import { PokemonListService } from 'src/app/services/pokemon-list.service';
+
 
 @Component({
   selector: 'app-catalogue',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CataloguePage implements OnInit {
 
-  constructor() { }
+  get loading(): boolean {
+    return this.pokemonListService.loading;
+  }
+
+  get pokemonLists(): PokemonList[] {
+    return this.pokemonListService.pokemonLists;
+  }
+
+  constructor(
+    private readonly pokemonListService: PokemonListService
+  ) { }
 
   ngOnInit(): void {
+    this.pokemonListService.findAllPokemon()
   }
 
 }
