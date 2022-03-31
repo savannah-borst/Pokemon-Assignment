@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageKeys } from 'src/app/enum/storage-keys.enum';
 import { PokemonList } from 'src/app/models/pokemon.module';
 import { PokemonListService } from 'src/app/services/pokemon-list.service';
 
@@ -14,8 +15,12 @@ export class CataloguePage implements OnInit {
     return this.pokemonListService.loading;
   }
 
-  get pokemonLists(): PokemonList[] {
-    return this.pokemonListService.pokemonLists;
+  get pokemonList(): PokemonList[] {
+    return this.pokemonListService.pokemonList;
+  }
+
+  get error(): string {
+    return this.pokemonListService.error;
   }
 
   constructor(
@@ -23,7 +28,6 @@ export class CataloguePage implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.pokemonListService.findAllPokemon()
+      this.pokemonListService.findAllPokemon();
   }
-
 }

@@ -1,8 +1,8 @@
 <main class="container">
-    <ul>
-        <li *ngFor="let list of pokemonLists">
-            <span>{{ list.name }}</span>
-        </li>
-    </ul>
-
+  <div class="row">
+    <div class="col-3" *ngFor="let pokemonList of pokemonLists">
+      <app-pokemon-list-item  [pokemonList]="pokemonList"></app-pokemon-list-item>
+    </div>
+  </div>
+    
 </main>
