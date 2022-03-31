@@ -1,6 +1,5 @@
 <main class="container">
     <h1 *ngIf="this.trainer!=undefined">{{trainer.username}}'s page</h1>
     <p>Your caught Pokémon</p>
-    <p *ngFor="pokemonUser of caughtPokemon">{{caughtPokemon}}</p>
-    <!--<app-pokemon-list [pokemon]="caughtPokemon"></app-pokemon-list>-->
+    <app-pokemon-list [pokemonLists]="pokemonCaught"></app-pokemon-list>
 </main>

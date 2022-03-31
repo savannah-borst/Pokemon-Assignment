@@ -54,7 +54,6 @@ export class PokemonListService {
     .subscribe({
       next: (pokemon: Result) => {
         this._pokemonList = pokemon.results;
-        console.log(pokemon.results);
 
         this.setPokemonInfo();
 

@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Trainer } from 'src/app/models/trainer.module';
 import { CatchPokemonService } from 'src/app/services/catch-pokemon.service';
 import { TrainerService } from 'src/app/services/trainer.service';
@@ -13,12 +14,13 @@ export class CatchButtonComponent implements OnInit {
 
   public loading: boolean = false;
   public caughtPokemon: boolean = false;
-  public disabled: boolean = false;
+  public hideBtn: boolean = true;
   @Input() pokemonName: string = "";
 
   constructor(
     private readonly catchPokemonService: CatchPokemonService,
     private readonly trainerService: TrainerService,
+    private readonly router: Router
   ) { }
 
   ngOnInit(): void {
@@ -38,6 +40,14 @@ export class CatchButtonComponent implements OnInit {
         console.log("ERROR", error.message);
       }
     })
+  }
+
+  hideButton(): void {
+    if (this.router.url === "/catalogue") {
+       this.hideBtn = false;
+    }
+
+    this.hideBtn = true;
   }
 
 
