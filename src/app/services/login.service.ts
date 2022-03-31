@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, of, switchMap } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { User } from '../models/user.module';
+import { Trainer } from '../models/trainer.module';
 
 const { apiUsers } = environment;
 const { apiKey } = environment;
@@ -16,30 +16,30 @@ export class LoginService {
   constructor(private readonly http: HttpClient) { }
 
   //login
-  public login(username: string):Observable<User> {
+  public login(username: string):Observable<Trainer> {
     return this.checkUsername(username)
     .pipe(
-      switchMap((user: User | undefined) => {
-        if (user === undefined) {
+      switchMap((trainer: Trainer | undefined) => {
+        if (trainer === undefined) {
           return this.createUser(username)
         }
-        return of(user);
+        return of(trainer);
       })
     )
   }
   
   //check if user exists
-  private checkUsername(username: string): Observable<User | undefined> {
-    return this.http.get<User[]>(`${apiUsers}?username=${username}`)
+  private checkUsername(username: string): Observable<Trainer | undefined> {
+    return this.http.get<Trainer[]>(`${apiUsers}?username=${username}`)
     //RxJS Operators
     .pipe(
-      map((response: User[]) => response.pop())
+      map((response: Trainer[]) => response.pop())
     )
   }
   
   // if user does not exist - Create user
-  private createUser(username: string): Observable<User> {
-    const user = {
+  private createUser(username: string): Observable<Trainer> {
+    const trainer = {
       username,
       pokemon: []
     };
@@ -49,7 +49,7 @@ export class LoginService {
       "x-api-key": apiKey
     })
     
-    return this.http.post<User>(apiUsers, user, {
+    return this.http.post<Trainer>(apiUsers, trainer, {
       headers
     })
   }

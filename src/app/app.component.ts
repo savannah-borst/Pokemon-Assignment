@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from './services/user.service';
+import { TrainerService } from './services/trainer.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'pokemon-assignment';
 
   constructor(
-    private readonly userService: UserService,
+    private readonly trainerService: TrainerService,
     private readonly route: ActivatedRoute,
     //private readonly pokemonService: PokemonService
   ) {}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/models/user.module';
-import { UserService } from 'src/app/services/user.service';
+import { Trainer } from 'src/app/models/trainer.module';
+import { TrainerService } from 'src/app/services/trainer.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,12 +9,12 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class NavbarComponent implements OnInit {
 
-  get user(): User | undefined {
-    return this.userService.user;
+  get trainer(): Trainer | undefined {
+    return this.trainerService.trainer;
   }
 
   constructor(
-    private readonly userService: UserService
+    private readonly trainerService: TrainerService
   ) { }
 
   ngOnInit(): void {

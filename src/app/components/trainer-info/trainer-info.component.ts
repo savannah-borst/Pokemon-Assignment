@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user.module';
-import { UserService } from '../../services/user.service';
+import { Trainer } from '../../models/trainer.module';
+import { TrainerService } from '../../services/trainer.service';
 
 @Component({
   selector: 'app-trainer-info',
@@ -9,19 +9,19 @@ import { UserService } from '../../services/user.service';
 })
 export class TrainerInfoComponent implements OnInit {
 
-  get user(): User | undefined {
-    return this.userService.user;
+  get trainer(): Trainer | undefined {
+    return this.trainerService.trainer;
   }
 
   get caughtPokemon(): string[] {
-    if (this.userService.user){
-      return this.userService.user.pokemon
+    if (this.trainerService.trainer){
+      return this.trainerService.trainer.pokemon
     }
     return [];
   }
 
   constructor(
-    private readonly userService: UserService
+    private readonly trainerService: TrainerService
   ) { }
 
 
