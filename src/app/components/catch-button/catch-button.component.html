@@ -1,4 +1,17 @@
-<button class="btn btn-primary"
+<ng-container *ngIf="caughtPokemon; then caught else catch"></ng-container>
+
+<ng-template #caught>
+    <button class="btn btn-info" disabled="isDisabled" data-bs-toggle="button"
+        (click)="catchPokemon()">
+        <span class="material-icons">catching_pokemon</span>
+    </button>
+</ng-template>
+
+<ng-template #catch>
+    <button class="btn btn-primary"
     (click)="catchPokemon()">
-    <span class="material-icons">catching_pokemon</span>
-</button>
+        <span class="material-icons">catching_pokemon</span>
+    </button>
+</ng-template>
+
+
