@@ -26,5 +26,9 @@ export class UserService {
   constructor() { 
     this._user = StorageUtil.storageRead<User>(StorageKeys.User);
   }
+
+  //get pokemon based on pokemonname
+
+  //Path request with userid and pokemon name
   
 }
