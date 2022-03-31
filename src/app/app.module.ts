@@ -16,6 +16,7 @@ import { PokemonListComponent } from '../app/components/pokemon-list/pokemon-lis
 import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
 
 
+
 @NgModule({
   declarations: [ //components
     AppComponent,
@@ -27,7 +28,7 @@ import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon
     TrainerCollectionComponent,
     NavbarComponent,
     PokemonListComponent,
-    PokemonListItemComponent,
+    PokemonListItemComponent
   ],
   imports: [ //modules
     BrowserModule,
