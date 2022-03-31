@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from './services/user.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     private readonly userService: UserService,
+    private readonly route: ActivatedRoute,
     //private readonly pokemonService: PokemonService
   ) {}
 

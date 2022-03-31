@@ -14,6 +14,10 @@ export class UserService {
     return this._user;
   }
 
+  public get pokemonUser(): string[] | undefined {
+    return  this._user?.pokemon;
+  }
+
   public set user(user: User | undefined) {
     StorageUtil.storageSave<User>(StorageKeys.User, user!);
     this._user = user;

@@ -1,5 +1,6 @@
 <main class="container">
     <h1 *ngIf="this.user!=undefined">{{user.username}}'s page</h1>
     <p>Your caught Pokémon</p>
+    <p *ngFor="pokemonUser of pokemonUser">{{pokemonUser}}</p>
     <!--<app-pokemon-list [pokemon]="favourites"></app-pokemon-list>-->
 </main>
