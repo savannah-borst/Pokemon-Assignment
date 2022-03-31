@@ -1,11 +1,18 @@
 
-    <div class="card" *ngIf="pokemonList">
+    <div class="card text-center" *ngIf="pokemonList">
       <div class="card-body">
+<<<<<<< HEAD
         <h5 class="card-title">{{ pokemonList.name }} + {{ pokemonList.id }} + {{ pokemonList.type }}</h5>
         <img [src]="pokemonList.img" class="card-img-top" />
         <p class="card-text">
           
         </p>
         <app-catch-button [pokemonName]="pokemonList.name"></app-catch-button>
+=======
+        <h5 class="card-title">#{{ pokemonList.id }} {{ pokemonList.name }}</h5>
+        <div class="image-container">
+          <img [src]="pokemonList.img" class="card-img" />
+        </div>
+>>>>>>> 6a057bd0a78e9f8363585f2983abafc6e9504bcc
       </div>
     </div>

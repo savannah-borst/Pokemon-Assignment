@@ -1,8 +1,7 @@
 <main class="container">
-  <div class="row">
-    <div class="col-3" *ngFor="let pokemonList of pokemonLists">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col" *ngFor="let pokemonList of pokemonLists">
       <app-pokemon-list-item  [pokemonList]="pokemonList"></app-pokemon-list-item>
     </div>
-  </div>
-    
+  </div>  
 </main>

@@ -1,0 +1,14 @@
+.card {
+    background-color: #FFCD02;
+    .card-body {
+    }
+    .card-title {
+        color: #FFFFFF;
+        text-transform: capitalize;
+    }
+    .image-container {
+        .card-img {
+            width: 50%;
+        }
+    }
+}
