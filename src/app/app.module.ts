@@ -13,6 +13,7 @@ import { TrainerInfoComponent } from '../app/components/trainer-info/trainer-inf
 import { TrainerCollectionComponent } from '../app/components/trainer-collection/trainer-collection.component';
 import { NavbarComponent } from '../app/components/navbar/navbar.component';
 import { PokemonListComponent } from '../app/components/pokemon-list/pokemon-list.component';
+import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { PokemonListComponent } from '../app/components/pokemon-list/pokemon-lis
     TrainerCollectionComponent,
     NavbarComponent,
     PokemonListComponent,
+    PokemonListItemComponent,
   ],
   imports: [ //modules
     BrowserModule,
