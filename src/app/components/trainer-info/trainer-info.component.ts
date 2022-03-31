@@ -13,9 +13,12 @@ export class TrainerInfoComponent implements OnInit {
     return this.userService.user;
   }
 
-get pokemonUser(): string[] | undefined  {
-  return this.userService.pokemonUser;
-}
+  get caughtPokemon(): string[] {
+    if (this.userService.user){
+      return this.userService.user.pokemon
+    }
+    return [];
+  }
 
   constructor(
     private readonly userService: UserService
