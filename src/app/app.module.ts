@@ -12,7 +12,7 @@ import { InputUsernameComponent } from './components/input-username/input-userna
 import { TrainerInfoComponent } from '../app/components/trainer-info/trainer-info.component';
 import { NavbarComponent } from '../app/components/navbar/navbar.component';
 import { PokemonListComponent } from '../app/components/pokemon-list/pokemon-list.component';
-import { CatchButtonComponent } from './components/catch-button/catch-button.component';
+import { CatchButtonComponent } from '../app/components/catch-button/catch-button.component';
 import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
 
 

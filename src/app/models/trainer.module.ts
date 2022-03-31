@@ -1,4 +1,4 @@
-export interface User {
+export interface Trainer {
     id: number;
     username: string;
     pokemon: string[];
