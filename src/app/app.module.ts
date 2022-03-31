@@ -9,10 +9,10 @@ import { LandingPage } from './pages/landing/landing.page';
 import { TrainerPage } from './pages/trainer/trainer.page';
 import { CataloguePage } from './pages/catalogue/catalogue.page';
 import { InputUsernameComponent } from './components/input-username/input-username.component';
-import { TrainerInfoComponent } from './components/trainer-info/trainer-info.component';
-import { TrainerCollectionComponent } from './components/trainer-collection/trainer-collection.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { TrainerInfoComponent } from '../app/components/trainer-info/trainer-info.component';
+import { TrainerCollectionComponent } from '../app/components/trainer-collection/trainer-collection.component';
+import { NavbarComponent } from '../app/components/navbar/navbar.component';
+import { PokemonListComponent } from '../app/components/pokemon-list/pokemon-list.component';
 
 
 @NgModule({
