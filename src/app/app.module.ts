@@ -14,6 +14,8 @@ import { TrainerCollectionComponent } from '../app/components/trainer-collection
 import { NavbarComponent } from '../app/components/navbar/navbar.component';
 import { PokemonListComponent } from '../app/components/pokemon-list/pokemon-list.component';
 import { CatchButtonComponent } from './components/catch-button/catch-button.component';
+import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
+
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { CatchButtonComponent } from './components/catch-button/catch-button.com
     NavbarComponent,
     PokemonListComponent,
     CatchButtonComponent,
+    PokemonListItemComponent,
   ],
   imports: [ //modules
     BrowserModule,

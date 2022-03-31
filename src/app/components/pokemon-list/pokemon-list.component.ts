@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { PokemonList } from 'src/app/models/pokemon.module';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -8,20 +8,11 @@ import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.serv
 })
 export class PokemonListComponent implements OnInit {
 
-  pokemons: any[] = [];
-  constructor(private pokemonService: PokemonCatalogueService) {}
+  @Input() pokemonLists: PokemonList[] = [];
+
+  constructor(
+    ) {}
 
   ngOnInit(): void {
-    this.pokemonService.getPokemon()
-    .subscribe((reponse: any) => {
-      reponse.results.forEach((result: { name: string; }) => {
-        this.pokemonService.getMorePokemonData(result.name)
-        .subscribe((uniqueResponse: any) => {
-          this.pokemons.push(uniqueResponse);
-          console.log(this.pokemons);
-      });
-        
-      });
-    });
   }
 }
