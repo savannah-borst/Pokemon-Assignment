@@ -10,7 +10,6 @@ import { TrainerPage } from './pages/trainer/trainer.page';
 import { CataloguePage } from './pages/catalogue/catalogue.page';
 import { InputUsernameComponent } from './components/input-username/input-username.component';
 import { TrainerInfoComponent } from '../app/components/trainer-info/trainer-info.component';
-import { TrainerCollectionComponent } from '../app/components/trainer-collection/trainer-collection.component';
 import { NavbarComponent } from '../app/components/navbar/navbar.component';
 import { PokemonListComponent } from '../app/components/pokemon-list/pokemon-list.component';
 import { CatchButtonComponent } from './components/catch-button/catch-button.component';
@@ -26,7 +25,6 @@ import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon
     CataloguePage,
     InputUsernameComponent,
     TrainerInfoComponent,
-    TrainerCollectionComponent,
     NavbarComponent,
     PokemonListComponent,
     CatchButtonComponent,
