@@ -1,27 +1,34 @@
-# PokemonAssignment
+# Assignment 8: Create a Pokémon Trainer using Angular
+[![web](https://img.shields.io/static/v1?logo=heroku&message=Online&label=Heroku&color=430098)]()
+## Assignment
+For the assignment we had to build a Pokémon Trainer web app using the Angular Framework.
+To keep track of users and Pokémon we had to use an other [API](https://github.com/dewald-els/noroff-assignment-api) which Noroff made for easy use in our assignments.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+It had to include a Start page, Translation page and a profile page.
 
-## Development server
+## How To Use
+Go to the following [website]()
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Enter a username and go catch Pokémon.
 
-## Code scaffolding
+To use locally download or clone the repository and run `npm install` then to start to program `ng serve`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Future
+Future work may include:
+- show more info btn to get more info like type and stats.
+- colour coordinated frames for each pokemon according to type.
 
-## Build
+## Built With
+[Visual Studio Code](https://code.visualstudio.com/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+[Angular](https://angular.io/)
 
-## Running unit tests
+[Bootstrap](https://getbootstrap.com/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Credits
+[Richie Schuurman](https://github.com/RichieSchuurman)
 
-## Running end-to-end tests
+[Savannah Borst](https://github.com/savannah-borst)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
