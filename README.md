@@ -12,7 +12,7 @@ Go to the following [website](https://pumpkin-tart-63407.herokuapp.com/login)
 
 Enter a username and go catch Pokémon.
 
-To use locally download or clone the repository and run `npm install` then run `ng serve` to start the program.
+To use locally download or clone the repository and run `npm install` then change in the package.json the start script to `ng serve` then run `ng serve` to start the program.
 
 ## Future
 Future work may include:
