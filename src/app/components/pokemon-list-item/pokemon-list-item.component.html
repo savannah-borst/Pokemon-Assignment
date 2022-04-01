@@ -1,10 +1,11 @@
 
     <div class="card text-center" *ngIf="pokemonList">
       <div class="card-body">
-        <h5 class="card-title">#{{ pokemonList.id }} {{ pokemonList.name }}</h5>
+        <h5 class="card-title">#{{ pokemonList.id }} {{ pokemonList.name }} <app-catch-button [pokemonName]="pokemonList.name"></app-catch-button></h5>
+
         <div class="image-container">
           <img [src]="pokemonList.img" class="card-img" />
         </div>
-        <app-catch-button [pokemonName]="pokemonList.name"></app-catch-button>
+        
       </div>
     </div>

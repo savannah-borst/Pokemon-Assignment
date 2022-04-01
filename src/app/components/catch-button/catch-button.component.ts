@@ -14,8 +14,17 @@ export class CatchButtonComponent implements OnInit {
 
   public loading: boolean = false;
   public caughtPokemon: boolean = false;
-  public hideBtn: boolean = true;
   @Input() pokemonName: string = "";
+
+  reloadPage(): void {
+    const routeUrl = this.router.url
+    if (routeUrl === "/trainer") {
+      this.router.routeReuseStrategy.shouldReuseRoute = () => false
+      this.router.onSameUrlNavigation = 'reload'
+      this.router.navigate(["/trainer"])
+      console.log(this.router.url);
+    }
+  }
 
   constructor(
     private readonly catchPokemonService: CatchPokemonService,
@@ -29,10 +38,16 @@ export class CatchButtonComponent implements OnInit {
 
   catchPokemon(): void {
     this.loading = true;
+
+    if (this.caughtPokemon && !window.confirm("You have already caught " + this.pokemonName + " would you like to release it?")) {
+      return;
+    }
+
     // add the pokemon to pokemon user
     this.catchPokemonService.addToCaught(this.pokemonName)
     .subscribe({
       next: (response: Trainer) => {
+        this.reloadPage();
         this.loading = false;
         this.caughtPokemon = this.trainerService.caughtPokemon(this.pokemonName);
       },
@@ -41,15 +56,4 @@ export class CatchButtonComponent implements OnInit {
       }
     })
   }
-
-  hideButton(): void {
-    if (this.router.url === "/catalogue") {
-       this.hideBtn = false;
-    }
-
-    this.hideBtn = true;
-  }
-
-
-
 }

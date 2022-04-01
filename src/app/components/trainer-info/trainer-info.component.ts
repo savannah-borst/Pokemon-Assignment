@@ -44,7 +44,6 @@ export class TrainerInfoComponent implements OnInit {
         this.pokemonCaught.push(pokemon)
       }
     })
-    //const pokemon: PokemonList | undefined =
   }
 
 

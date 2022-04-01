@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { finalize, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { PokemonList } from '../models/pokemon.module';
@@ -18,6 +19,7 @@ export class CatchPokemonService {
     private readonly http:  HttpClient,
     private readonly trainerService: TrainerService,
     private readonly PokemonListService: PokemonListService,
+    private readonly router: Router
   ) { }
 
   //get pokemon based on pokemonname
