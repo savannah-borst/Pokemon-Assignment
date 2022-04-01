@@ -28,6 +28,6 @@ export class CataloguePage implements OnInit {
   ) { }
 
   ngOnInit(): void {
-      this.pokemonListService.findAllPokemon(10, 20);
+      this.pokemonListService.findAllPokemon();
   }
 }

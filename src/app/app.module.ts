@@ -15,8 +15,6 @@ import { PokemonListComponent } from '../app/components/pokemon-list/pokemon-lis
 import { CatchButtonComponent } from '../app/components/catch-button/catch-button.component';
 import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
 
-import { NgxPaginationModule } from 'ngx-pagination';
-
 
 
 @NgModule({
@@ -37,7 +35,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
