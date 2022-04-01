@@ -3,6 +3,7 @@
 ## Assignment
 For the assignment we had to build a Pokémon Trainer web app using the Angular Framework.
 To keep track of users and Pokémon we had to use an other [API](https://github.com/dewald-els/noroff-assignment-api) which Noroff made for easy use in our assignments.
+For the Pokémon information we used the [PokeAPI](https://pokeapi.co/)
 
 It had to include a Start page, Translation page and a profile page.
 
