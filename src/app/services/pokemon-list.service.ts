@@ -45,7 +45,7 @@ export class PokemonListService {
 
   public findAllPokemon(): void {
     this._loading = true;
-    this.http.get<Result>(apiPokemonList + "?limit=100")
+    this.http.get<Result>(apiPokemonList + "?limit=151")
     .pipe(
       finalize(() => {
         this._loading = false;

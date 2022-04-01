@@ -1,8 +1,10 @@
 <main class="container">
-    <h2>Gotta Catch 'Em All!</h2>
+    <div class="row">
+        <div class="col-12">
+            <h2>Gotta Catch 'Em All!</h2>
     <p>Enter your name below to start your adventure</p>
     <form class="w-25" #userInput="ngForm" (ngSubmit)="userSubmit(userInput)">
-        <input class="form-control" type="text" 
+        <input class="form-control form-styling" type="text" 
         ngModel
         #username="ngModel"
         name="username" 
@@ -10,9 +12,9 @@
         placeholder="Enter your trainer name">
         <button class="mt-3 btn btn-primary" type="submit">Start Catching</button>
     </form>
-
-    <div class="triangle"></div>
-    <div class="square"></div>
+        </div>
+    </div>
+    
 </main>
 
 

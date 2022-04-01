@@ -1,0 +1,19 @@
+.background {
+    position: fixed;
+    width: 60vh;
+    top: 0;
+    background-color: #FFCD02;
+    right: 0;
+    height: 100%;
+    text-align: center;
+
+    .helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    
+    .background-image {
+        width: 90%;
+    }
+}
