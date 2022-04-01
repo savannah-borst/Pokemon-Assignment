@@ -1,7 +1,7 @@
     export interface Result {
         count: number;
         next: string;
-        previous: string;
+        previous: null;
         results: PokemonList[]
     }    
     

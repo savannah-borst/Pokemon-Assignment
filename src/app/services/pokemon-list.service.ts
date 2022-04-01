@@ -31,6 +31,7 @@ export class PokemonListService {
     return this._error;
   }
 
+
   get next(): string {
     return this._next;
   }
@@ -58,10 +59,10 @@ export class PokemonListService {
     .subscribe({
       next: (pokemon: Result) => {
         this._pokemonList = pokemon.results;
-        this._count = pokemon.count;
-        console.log(this._count);
-        this._next = pokemon.next;
-        this._previous = pokemon.previous;
+        console.log(pokemon.count)
+        console.log(pokemon.next)
+        console.log(pokemon.previous)
+        console.log(pokemon.results)
 
         this.setPokemonInfo();
 
@@ -72,6 +73,10 @@ export class PokemonListService {
         this._error = error.message;
       }
     })
+  }
+
+  public getPokemonByType(): void {
+
   }
 
   public getPokemonById(id: number): PokemonList | undefined {
