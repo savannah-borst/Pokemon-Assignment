@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Trainer } from 'src/app/models/trainer.module';
 import { TrainerService } from 'src/app/services/trainer.service';
 
@@ -14,10 +15,18 @@ export class NavbarComponent implements OnInit {
   }
 
   constructor(
-    private readonly trainerService: TrainerService
+    private readonly trainerService: TrainerService,
+    private readonly router: Router,
   ) { }
 
   ngOnInit(): void {
+  }
+
+  logout(): void {
+    this.trainerService.trainer = undefined;
+    localStorage.clear();
+    sessionStorage.clear();
+    this.router.navigateByUrl("/login")
   }
 
 }

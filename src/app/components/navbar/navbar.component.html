@@ -6,7 +6,8 @@
     <ng-container *ngIf="trainer !== undefined">
         <div class="row">
                 <a class="me-4 col btn btn-primary" routerLink="/catalogue">Catalogue</a>
-                <a class="me-5 col btn btn-primary" routerLink="/trainer">Trainer</a>
+                <a class="me-4 col btn btn-primary" routerLink="/trainer">Trainer</a>
+                <a (click)="logout()" class="me-5 col btn btn-primary">Logout</a>
         </div>
     </ng-container>
 </nav>
