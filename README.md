@@ -1,4 +1,4 @@
-# Assignment 7: Create a Sign Language Translator using React
+# Assignment 8: Create a Pokémon Trainer using Angular
 [![web](https://img.shields.io/static/v1?logo=heroku&message=Online&label=Heroku&color=430098)]()
 ## Assignment
 For the assignment we had to build a Pokémon Trainer web app using the Angular Framework.
