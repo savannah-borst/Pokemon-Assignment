@@ -17,6 +17,7 @@ export class PokemonListService {
   private _error: string = "";
   private _next: string = "";
   private _previous: string = "";
+  private _count: number = 0;
   
   get pokemonList(): PokemonList[] {
     return this._pokemonList
@@ -39,13 +40,17 @@ export class PokemonListService {
     return this._previous;
   }
 
+  get count(): number {
+    return this._count;
+  }
+
   constructor(private readonly http: HttpClient) { }
 
   
 
-  public findAllPokemon(): void {
+  public findAllPokemon(limit: number, offset: number): void {
     this._loading = true;
-    this.http.get<Result>(apiPokemonList + "?limit=100")
+    this.http.get<Result>(`${apiPokemonList}/?${limit}&${offset}`)
     .pipe(
       finalize(() => {
         this._loading = false;
@@ -54,6 +59,10 @@ export class PokemonListService {
     .subscribe({
       next: (pokemon: Result) => {
         this._pokemonList = pokemon.results;
+        console.log(pokemon.count)
+        console.log(pokemon.next)
+        console.log(pokemon.previous)
+        console.log(pokemon.results)
 
         this.setPokemonInfo();
 

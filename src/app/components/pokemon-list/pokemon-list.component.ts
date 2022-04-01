@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PokemonList } from 'src/app/models/pokemon.module';
 
-
 @Component({
   selector: 'app-pokemon-list',
   templateUrl: './pokemon-list.component.html',
@@ -15,5 +14,6 @@ export class PokemonListComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
+
   }
 }
